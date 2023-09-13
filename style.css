@@ -1,0 +1,114 @@
+/* The :root selector is used to select all the elements of an HTML Document */
+:root {
+  --color-green: #31c48d;
+  --color-white: #ffffff;
+  --color-dark-gray: #33333d;
+  --color-medium-grey: #424250;
+  --color-light-grey: #9ca3ae;
+}
+
+/* If you set box-sizing: border-box; on an element, padding and border are included in the width and height you specified */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+/* Margin=0 overrides some margins that other browsers have */
+body {
+  margin: 0;
+  background-color: var(--color-medium-grey);
+  color: var(--color-white);
+  /* Added Roboto font from Google fonts */
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/*header  */
+
+.header {
+  text-align: center;
+}
+
+.header__title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-light-grey);
+}
+
+/* Controls */
+
+.controls {
+  background-color: yellow;
+}
+
+/* counter */
+
+.counter {
+  background-color: var(--color-dark-gray);
+}
+
+.counter__value {
+  width: 100%;
+  height: 15rem;
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 900;
+  background: none;
+  color: var(--color-white);
+  border-width: 0;
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+/* Display flex so that the buttons are next to each other */
+.counter__actions {
+  display: flex;
+}
+
+.counter__button {
+  background: none;
+  width: 50%;
+  border: width 0;
+  color: var(--color-white);
+  font-size: 3rem;
+  height: 10rem;
+  border-right: 1px solid var(--color-light-grey);
+  /* Addition animation to the button */
+  transition: transform 0.3s;
+  transform: translateY(0);
+}
+
+.counter__button:disabled {
+  opacity: 0.2;
+}
+
+/* Adding a clicking effect to the buttons */
+.counter__button:active {
+  background: var(--color-medium-grey);
+  /* To give the buttons a moving effect when they are clicked */
+  transform: translateY(2%);
+}
+
+/* '_first' = we're adding a modifier for a BIM syntax (we don't have to use BIM) */
+.counter_button_first {
+  border-right: 1px solid var(--color-light-grey);
+}
+
+/* Footer */
+
+.footer {
+  background: var(--color-dark-gray);
+  color: var(--color-light-grey);
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.footer__link {
+  color: var(--color-white);
+}
