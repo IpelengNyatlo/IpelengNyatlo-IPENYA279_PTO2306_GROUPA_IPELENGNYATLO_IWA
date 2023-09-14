@@ -54,12 +54,3 @@ const addHandler = () => {
 // 'event listeners says: if this event happens, do this. Starts with a verb'
 subtract.addEventListener("click", subtractHandler);
 add.addEventListener("click", addHandler);
-
-console.log(user);
-const user = "Ipeleng";
-
-const id = faoahtaht;
-
-/**Link to id would {@link id} */
-
-throw new error("something wrong");
