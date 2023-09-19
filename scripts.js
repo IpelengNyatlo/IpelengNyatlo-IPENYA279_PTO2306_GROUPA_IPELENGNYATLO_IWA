@@ -1,3 +1,5 @@
+import "./jsFileSomewhere";
+
 // These are global constants (Upper case and use underscores instead of space)
 const MAX_NUMBER = 15;
 const MIN_NUMBER = -5;

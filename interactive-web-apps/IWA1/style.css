@@ -1,6 +1,8 @@
 /* The :root selector is used to select all the elements of an HTML Document */
 :root {
   --color-green: #31c48d;
+  --color-red-light: #f2dede;
+  --color-red-dark: #a94442;
   --color-white: #ffffff;
   --color-dark-gray: #33333d;
   --color-medium-grey: #424250;
@@ -25,6 +27,7 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   height: 100%;
 }
@@ -51,13 +54,14 @@ body {
 
 .counter {
   background-color: var(--color-dark-gray);
+  max-width: 30rem;
 }
 
 .counter__value {
   width: 100%;
   height: 15rem;
   text-align: center;
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 900;
   background: none;
   color: var(--color-white);
@@ -72,7 +76,7 @@ body {
 
 .counter__button {
   background: none;
-  width: 50%;
+  width: 100%;
   border: width 0;
   color: var(--color-white);
   font-size: 3rem;
@@ -107,8 +111,17 @@ body {
   padding: 2rem;
   font-size: 2rem;
   text-align: center;
+  width: 100%;
 }
 
 .footer__link {
   color: var(--color-white);
+}
+
+/* Error */
+
+.error {
+  padding: 2rem;
+  background-color: var(--color-red-light);
+  color: var(--color-red-dark);
 }

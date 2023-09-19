@@ -1,3 +1,16 @@
+// We initially imported 'hello' from both modules, it was contrasting, so we renamed/re-declared them as helloA and helloB
+// import { hello as helloA } from "./code-a"; relevant for lecture video till30min point
+// import { hello as helloB } from "./code-b";
+
+// Use Ctrl+ Space for auto completion
+import { example } from "./code-a";
+
+// running the above function twice in the main file. Indicated below
+example();
+example(0);
+
+console.log(helloA, helloB);
+
 // These are global constants (Upper case and use underscores instead of space)
 const MAX_NUMBER = 15;
 const MIN_NUMBER = -5;
@@ -20,36 +33,6 @@ console.log(typeof "123" + typeof 123, typeof true);
 // The below are event handlers and they can be declared as a function.
 
 // use =, brackets,arrow and curly brackets to assign a behaviour, use = is you want to assign value to a piece of memory.
-const subtractHandler = () => {
-  const newValue = parseInt(number.value) - STEP_AMOUNT;
-  number.value = newValue;
-
-  // the add.disabled is > or = 15 and you subtract, remove the disabled from false. (i.e if its at max value, when you subtract, the disable behaviour is no longer applicable)
-  if (add.disabled === true) {
-    add.disabled = false;
-  }
-
-  if (newValue <= MIN_NUMBER) {
-    subtract.disabled = true;
-  }
-};
-
-// 'number.value + 1 means the current value number +1
-const addHandler = () => {
-  const newValue = parseInt(number.value) + STEP_AMOUNT;
-  number.value = newValue;
-
-  //   If new value is greater or = to max number...
-  if (subtract.disabled === true) {
-    subtract.disabled = false;
-  }
-
-  if (newValue >= MAX_NUMBER) {
-    add.disabled = true;
-  }
-
-  //   number.value = number.value + 1;
-};
 
 // 'event listeners says: if this event happens, do this. Starts with a verb'
 subtract.addEventListener("click", subtractHandler);

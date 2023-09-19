@@ -13,10 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <!-- forward slash and link the javascript -->
-    <!-- use 'defer' because when we run the JS none of the html will be working yet -->
+    <!-- forward slash and link the javascript so it can load and run. There's no need to call it "scripts.js", but it is common to name it "script" or "scripts" -->
+    <!--the "defer" attribute tells the browser to load the HTML first before running JS. Alternatively, move the script tag at the end, just after footer, inside the main. The functionally will still work because is not run immediately but only at the end. But common practice= use defer or async. P.S your site will be quick if you position the script with defer at the top, because the browser will read the code, download js in the background whilst loading html. If you place the script at the bottom, js only starts downloading once the html is loaded  -->
+    <!-- Defer respects the order in which they are declared, so if you have multiple scripts, it will download them in the respective order. -->
     <script src="/scripts.js" defer></script>
-
+   <!-- use a nomodule attribute for old browsers that may not support your file. But you'd hardly need it, most browsers now support "module" -->
+    <script src="/fallback.js" nomodule=""></script> </script>
   </head>
   <body>
 
@@ -28,7 +30,7 @@
    <!-- Why did we change the controls from a div to an aside, why the emphasis? -->
         <!-- <aside class="controls">
         <label>
-            <!-- Name of the label below, used span instead of a p tag -->
+            <!- Name of the label below, used span instead of a p tag -->
             <!-- <span>Display</span>
                 <select>
                     <option>Single</option>
@@ -50,6 +52,12 @@
     </aside> -->
     
     <main class="counter"></main>
+    <noscript>
+        <p class="error">This file needs Javascript to funtion </p>
+    </noscript>
+    
+    <!-- position the noscript tag inside the body, inside the main -->
+
     <!-- Readonly value is similar to the 'placeholder function' -->
         <input class="counter__value" data-key="number" readonly value="0">
         <div class="counter__actions">
