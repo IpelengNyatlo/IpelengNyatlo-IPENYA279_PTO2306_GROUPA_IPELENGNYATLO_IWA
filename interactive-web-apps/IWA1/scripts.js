@@ -1,15 +1,17 @@
-// We initially imported 'hello' from both modules, it was contrasting, so we renamed/re-declared them as helloA and helloB
-// import { hello as helloA } from "./code-a"; relevant for lecture video till30min point
+// We initially imported 'hello' from both modules, it was contrasting, so we renamed/re-declared them as helloA and helloB,  relevant for lecture video till30min point
+// import { hello as helloA } from "./code-a";
 // import { hello as helloB } from "./code-b";
 
-// Use Ctrl+ Space for auto completion
-import { example } from "./code-a";
+// // Use Ctrl+ Space for auto completion
+// import { example } from "./code-a";
 
-// running the above function twice in the main file. Indicated below
-example();
-example(0);
+// // running the above function twice in the main file. Indicated below
+// example();
+// example(0);
 
-console.log(helloA, helloB);
+// console.log(helloA, helloB);
+
+// Every comment above here is related to the follow along in lecture video 2.
 
 // These are global constants (Upper case and use underscores instead of space)
 const MAX_NUMBER = 15;

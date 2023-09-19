@@ -1,14 +1,8 @@
 // scripts.js
-// I put curly brackets around the variables, and fixed the 'form' spelling to 'from'
+// I put curly brackets around the variables 'company' and 'year', and fixed the 'form' spelling to 'from'
 
-// import { company } from "configuration.js";
-// import { year } from "configuration.js";
+import { company } from "/interactive-web-apps/IWA3/IWA_3.3/configuration.js";
+import { year } from "/interactive-web-apps/IWA3/IWA_3.3/configuration.js";
 
-// // Changed querySelector to getElementById
-// const message = "© " + company + " (" + year + ")";
-// console.log(message);
-
-// document.getElementById("footer").innerText = message;
-
-const name = "Ipeleng";
-console.log(name);
+const message = "© " + company + " (" + year + ")";
+document.querySelector("footer").innerText = message;
