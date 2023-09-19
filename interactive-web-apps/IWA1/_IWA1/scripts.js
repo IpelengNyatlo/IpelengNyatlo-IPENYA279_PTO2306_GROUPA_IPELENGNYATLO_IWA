@@ -1,5 +1,3 @@
-import "./jsFileSomewhere";
-
 // These are global constants (Upper case and use underscores instead of space)
 const MAX_NUMBER = 15;
 const MIN_NUMBER = -5;
@@ -57,11 +55,11 @@ const addHandler = () => {
 subtract.addEventListener("click", subtractHandler);
 add.addEventListener("click", addHandler);
 
-console.log(user);
-const user = "Ipeleng";
+// console.log(user);
+// const user = "Ipeleng";
 
-const id = faoahtaht;
+// const id = faoahtaht;
 
-/**Link to id would {@link id} */
+// /**Link to id would {@link id} */
 
-throw new error("something wrong");
+// throw new error("something wrong");
