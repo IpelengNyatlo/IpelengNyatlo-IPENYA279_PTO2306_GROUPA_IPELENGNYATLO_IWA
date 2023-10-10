@@ -9,7 +9,7 @@ const NONE_SELECTED = 0;
 let customers = 1;
 let location = "RSA";
 // Made the currency an empty string to accomodate different currencies
-let currency = "";
+let currency = null;
 // Shipping value changed from 'null' to zero as a number
 let shipping = 0;
 
@@ -28,7 +28,7 @@ let total =
   batteries +
   pens +
   shirts; /*added this total for the above line items*/
-// Added brackets aroung Namibia's condition, and used '===' instead of '='
+// Added brackets around   Namibia's condition, and used '===' instead of '='
 // condition values of RSA and NAM were changed into a string(i.e we added quotation marks), we used === instead of one '=' (assigning) on the conditions
 if (location === "RSA") {
   shipping = 400;

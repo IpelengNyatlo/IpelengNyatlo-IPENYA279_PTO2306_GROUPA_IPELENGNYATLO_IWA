@@ -4,8 +4,8 @@ const year = 2050;
 let status = "student";
 let count = 0;
 
-// Should be in one bracket: There 
-// 1 = : you're assigning a variable. 3 = signs means comparing
+// Should be in one bracket: There
+// 1 = sign... you're assigning a variable. 3 = signs means comparing
 if (year === 2050) {
   // Added a closing bracket for 1st console log
   console.log("January", "New Year’s Day");
@@ -29,7 +29,7 @@ if (year === 2050) {
   date = "December";
   console.log(date, "Day of Reconciliation");
   //   I removed let from function below
-  count = count + 3;
+  count += 3;
 
   if (status === "parent") {
     console.log(date, "Christmas Day");
