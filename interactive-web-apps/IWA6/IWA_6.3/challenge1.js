@@ -12,8 +12,10 @@ const secondaryPhone = "0219131568";
 // used isNaN to checks if the string only contains numerical characters
 // Removed the 'typeof ==' and used isNaN to validate the strings
 // isNaN is used to check if the result of parseFloat is not a number
-const primaryValid = !isNaN(parseFloat(primaryPhone));
-const secondaryValid = !isNaN(parseFloat(secondaryPhone));
+const primaryValid = !Number.isNaN(parseFloat(primaryPhone));
+const secondaryValid = !Number.isNaN(parseFloat(secondaryPhone));
+
+// Added !Number.isNaN above
 
 // Alternatives: If isNaN returns true, ! (logical NOT) negates it to false, and if isNaN returns false, ! negates it to true. This way, you achieve the same result without the need for conditional ternary operators. This is a much cleaner code.
 // const primaryValid = !isNaN(primaryPhone);

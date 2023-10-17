@@ -12,21 +12,17 @@ const minuteOfDay = 00;
 
 // Only change below this line
 
-let tax1 =
-  parseInt(tax); /*Changed the tax value from string to a number(integer)*/
+
 let currecy = "R";
+let balance = undefined
 
 // I put the conditions in one brackets and removed the rest
 if (hourOfDay === 0 && minuteOfDay === 0) {
   // removed '' from the value '100' and '1' to turn it from being a string to being a number and used ParseInt to convert '8%' to being a number
-  const taxAsDecimal = tax1 / 100;
+  const taxAsDecimal = parseInt(tax) / 100;
   const startingAfterTax =
     salary * (1 - taxAsDecimal); /* I put brackets around '1 - taxAsDecimal*/
-  const balance = startingAfterTax - transport - food - rent;
-  console.log(currecy, balance.toFixed(2));
+   balance = startingAfterTax - transport - food - rent;
 }
-if (hourOfDay && minuteOfDay === undefined) {
-  console.log(null);
-}
-
+console.log(currecy, balance.toFixed(2));
 // changed 3 to 2 to set # of decimal places and included 'currecy' which I declared above to be included in the balance read.
